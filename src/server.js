@@ -5,6 +5,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { config } from './config.js';
 import { ensureSchema } from './db/schema.js';
+import { getDb } from './db/client.js';
+import { seedIfEmpty } from './db/seed-data.js';
 import { products } from './data/products.js';
 
 import publicRoutes from './routes/public.js';
@@ -68,8 +70,9 @@ app.use((err, req, res, _next) => {
 (async () => {
   try {
     await ensureSchema();
+    await seedIfEmpty(getDb());
   } catch (err) {
-    console.error('[startup] DB schema error:', err.message);
+    console.error('[startup] DB error:', err.message);
   }
   app.listen(config.port, () => {
     console.log(`[server] http://localhost:${config.port} (${config.env})`);
