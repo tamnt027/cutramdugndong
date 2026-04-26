@@ -1,89 +1,89 @@
 <%- include('../partials/head') %>
 
 <!-- HERO -->
-<section class="relative overflow-hidden bg-gradient-to-br from-forest-800 via-forest-900 to-forest-950 text-cream-50">
-  <div class="absolute inset-0 dot-pattern opacity-20"></div>
-  <div class="absolute -top-20 -right-20 w-80 h-80 bg-earth-500 rounded-full blur-3xl opacity-20"></div>
-  <div class="absolute -bottom-20 -left-20 w-96 h-96 bg-forest-500 rounded-full blur-3xl opacity-20"></div>
-
-  <div class="relative max-w-7xl mx-auto px-4 py-16 md:py-24 lg:py-32 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+<section class="relative overflow-hidden bg-cream-50">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,146,41,0.08),transparent_60%)]"></div>
+  <div class="relative max-w-7xl mx-auto px-4 py-16 md:py-20 lg:py-28 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
     <div>
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-earth-500/20 text-earth-300 text-xs sm:text-sm font-semibold mb-5">
-        <span class="w-2 h-2 rounded-full bg-earth-400 animate-pulse"></span>
-        Hơn 20 năm trong nghề
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-earth-200 bg-white text-earth-700 text-xs sm:text-sm font-medium mb-6">
+        <span class="w-1.5 h-1.5 rounded-full bg-earth-500"></span>
+        Hơn 20 năm uy tín trong nghề
       </div>
-      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5">
-        Cừ tràm <span class="text-earth-400">Dũng Đông</span><br class="hidden sm:block">
-        gia cố vững chắc, giá hợp lý
+      <h1 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-forest-950 mb-5">
+        Cừ tràm <span class="text-gradient-gold">Dũng Đông</span><br class="hidden sm:block">
+        gia cố vững chắc<br class="hidden sm:block">
+        cho mọi công trình
       </h1>
-      <p class="text-base sm:text-lg text-cream-200 mb-8 leading-relaxed">
-        Chuyên cung cấp <strong class="text-cream-50">cừ tràm, cừ bạch đàn, cừ dừa, lá dừa nước</strong> cho công trình xây dựng tại TP.HCM, Bình Dương, Long An, Đồng Nai, Bình Phước, Tây Ninh. Tuyển chọn kỹ - giao hàng tận nơi - hỗ trợ tư vấn miễn phí.
+      <p class="text-base sm:text-lg text-forest-700 mb-8 leading-relaxed max-w-xl">
+        Chuyên cung cấp <strong class="text-forest-900">cừ tràm, cừ bạch đàn, cừ dừa, lá dừa nước</strong> cho công trình tại TP.HCM, Bình Dương, Long An, Đồng Nai, Bình Phước, Tây Ninh.
       </p>
       <div class="flex flex-col sm:flex-row gap-3">
-        <a href="tel:<%= company.hotline %>" class="inline-flex items-center justify-center gap-2 bg-earth-500 hover:bg-earth-600 text-white px-6 py-3.5 rounded-md font-bold shadow-lg transition">
+        <a href="tel:<%= company.hotline %>" class="inline-flex items-center justify-center gap-2 bg-forest-900 hover:bg-forest-950 text-white px-6 py-3.5 rounded-xl font-semibold shadow-soft transition">
           <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
           Gọi <%= company.hotlineDisplay %>
         </a>
-        <a href="/lien-he" class="inline-flex items-center justify-center gap-2 bg-forest-50/10 hover:bg-forest-50/20 border border-cream-50/30 text-cream-50 px-6 py-3.5 rounded-md font-semibold transition backdrop-blur">
+        <a href="/lien-he" class="inline-flex items-center justify-center gap-2 bg-white hover:bg-cream-100 border border-forest-200 text-forest-900 px-6 py-3.5 rounded-xl font-semibold shadow-soft transition">
           Yêu cầu báo giá
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
         </a>
       </div>
 
-      <div class="mt-10 grid grid-cols-3 gap-4 sm:gap-6">
+      <div class="mt-12 grid grid-cols-3 gap-4 sm:gap-8 max-w-md">
         <div>
-          <div class="font-display font-bold text-2xl sm:text-3xl text-earth-400">20+</div>
-          <div class="text-xs sm:text-sm text-cream-200">năm kinh nghiệm</div>
+          <div class="font-display font-bold text-3xl sm:text-4xl text-forest-900">20<span class="text-earth-500">+</span></div>
+          <div class="text-xs sm:text-sm text-forest-600 mt-1">năm kinh nghiệm</div>
         </div>
         <div>
-          <div class="font-display font-bold text-2xl sm:text-3xl text-earth-400">1000+</div>
-          <div class="text-xs sm:text-sm text-cream-200">công trình</div>
+          <div class="font-display font-bold text-3xl sm:text-4xl text-forest-900">1000<span class="text-earth-500">+</span></div>
+          <div class="text-xs sm:text-sm text-forest-600 mt-1">công trình</div>
         </div>
         <div>
-          <div class="font-display font-bold text-2xl sm:text-3xl text-earth-400">6</div>
-          <div class="text-xs sm:text-sm text-cream-200">tỉnh thành phục vụ</div>
+          <div class="font-display font-bold text-3xl sm:text-4xl text-forest-900">6</div>
+          <div class="text-xs sm:text-sm text-forest-600 mt-1">tỉnh thành</div>
         </div>
       </div>
     </div>
 
     <div class="relative hidden lg:block">
-      <div class="relative aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-earth-500/30">
-        <img src="https://images.unsplash.com/photo-1518049362265-d5b2a6467637?w=900&q=85" alt="Cừ tràm chất lượng" class="w-full h-full object-cover">
-        <div class="absolute inset-0 bg-gradient-to-t from-forest-950/60 via-transparent to-transparent"></div>
+      <div class="absolute -inset-4 bg-gradient-to-tr from-earth-200 to-forest-100 rounded-3xl blur-2xl opacity-50"></div>
+      <div class="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-lifted">
+        <img src="/img/site/hero/hero-1.jpg" alt="Cừ tràm Dũng Đông" class="w-full h-full object-cover">
       </div>
-      <div class="absolute -bottom-6 -left-6 bg-cream-50 text-forest-950 p-5 rounded-xl shadow-xl max-w-xs">
-        <div class="flex items-center gap-3 mb-2">
-          <div class="w-12 h-12 rounded-full bg-forest-100 flex items-center justify-center">
-            <svg class="w-6 h-6 text-forest-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+      <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-lifted max-w-xs border border-cream-200">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-xl bg-forest-50 flex items-center justify-center">
+            <svg class="w-6 h-6 text-forest-700" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
           </div>
           <div>
-            <div class="font-bold text-sm">Cừ loại 1 tuyển chọn</div>
-            <div class="text-xs text-forest-700">Cam kết chất lượng</div>
+            <div class="font-semibold text-forest-950 text-sm">Cừ loại 1 tuyển chọn</div>
+            <div class="text-xs text-forest-600">Cam kết chất lượng</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="wood-strip"></div>
 </section>
 
 <!-- USP -->
-<section class="py-12 md:py-16 bg-cream-50">
+<section class="py-16 md:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="divider-leaf font-display font-semibold uppercase tracking-widest text-sm mb-3">Vì sao chọn chúng tôi</div>
-    <h2 class="text-center font-display font-bold text-3xl sm:text-4xl text-forest-900 mb-12">Cam kết của Dũng Đông</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="text-center mb-12 md:mb-16">
+      <div class="text-earth-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Vì sao chọn chúng tôi</div>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-forest-950 tracking-tight">Cam kết của Dũng Đông</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       <% const usps = [
-        { icon: '🌿', title: 'Tuyển chọn kỹ', desc: 'Cừ loại 1 thân thẳng, vỏ tươi, đường kính đúng chuẩn. Loại bỏ cây cong, cây mục.' },
-        { icon: '💰', title: 'Giá cạnh tranh', desc: 'Cam kết giá tốt nhất khu vực. Báo giá rõ ràng, không phát sinh chi phí ẩn.' },
-        { icon: '🚚', title: 'Giao hàng tận nơi', desc: 'Miễn phí vận chuyển nội thành TP.HCM. Hỗ trợ giao hàng trong ngày.' },
-        { icon: '👷', title: 'Tư vấn chuyên môn', desc: 'Đội ngũ kinh nghiệm 20+ năm, tư vấn chọn loại cừ và mật độ đóng phù hợp.' },
+        { svg: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z', title: 'Tuyển chọn kỹ', desc: 'Cừ loại 1 thân thẳng, vỏ tươi, đường kính đúng chuẩn. Loại bỏ cây cong, cây mục.' },
+        { svg: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z', title: 'Giá cạnh tranh', desc: 'Cam kết giá tốt nhất khu vực. Báo giá rõ ràng, không phát sinh chi phí ẩn.' },
+        { svg: 'M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1M5 17a2 2 0 104 0m-4 0a2 2 0 114 0m6 0a2 2 0 104 0m-4 0a2 2 0 114 0', title: 'Giao hàng tận nơi', desc: 'Miễn phí vận chuyển nội thành TP.HCM. Hỗ trợ giao hàng trong ngày cho đơn lớn.' },
+        { svg: 'M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z', title: 'Tư vấn chuyên môn', desc: 'Đội ngũ kinh nghiệm 20+ năm, tư vấn chọn loại cừ và mật độ đóng phù hợp.' },
       ]; %>
       <% usps.forEach(function(u) { %>
-        <div class="bg-white rounded-xl p-6 border border-earth-100 hover:border-earth-300 hover:shadow-lg transition group">
-          <div class="text-4xl mb-3 group-hover:scale-110 transition origin-left"><%= u.icon %></div>
-          <h3 class="font-display font-bold text-lg text-forest-900 mb-2"><%= u.title %></h3>
+        <div class="bg-cream-50 rounded-2xl p-6 lg:p-7 hover:bg-white hover:shadow-soft transition border border-cream-100">
+          <div class="w-12 h-12 rounded-xl bg-forest-900 text-white flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="<%= u.svg %>"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-forest-950 mb-2 tracking-tight"><%= u.title %></h3>
           <p class="text-sm text-forest-700 leading-relaxed"><%= u.desc %></p>
         </div>
       <% }); %>
@@ -92,25 +92,27 @@
 </section>
 
 <!-- SAN PHAM -->
-<section class="py-14 md:py-20 bg-gradient-to-b from-cream-50 to-cream-100 relative">
+<section class="py-16 md:py-24 bg-cream-50">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="divider-leaf font-display font-semibold uppercase tracking-widest text-sm mb-3">Sản phẩm</div>
-    <h2 class="text-center font-display font-bold text-3xl sm:text-4xl text-forest-900 mb-3">Các loại cừ chúng tôi cung cấp</h2>
-    <p class="text-center text-forest-700 max-w-2xl mx-auto mb-12 px-4">Đầy đủ kích thước cho mọi công trình - từ nhà phố nhỏ đến nhà xưởng, kè bờ kênh quy mô lớn.</p>
+    <div class="text-center mb-12 md:mb-16">
+      <div class="text-earth-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Sản phẩm</div>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-forest-950 tracking-tight mb-3">Các loại cừ chúng tôi cung cấp</h2>
+      <p class="text-forest-700 max-w-2xl mx-auto">Đầy đủ kích thước cho mọi công trình - từ nhà phố nhỏ đến nhà xưởng, kè bờ kênh quy mô lớn.</p>
+    </div>
 
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
       <% products.forEach(function(p) { %>
-        <a href="/san-pham/<%= p.slug %>" class="product-card bg-white rounded-xl overflow-hidden border border-earth-100 group block">
-          <div class="aspect-[4/3] overflow-hidden bg-forest-100">
+        <a href="/san-pham/<%= p.slug %>" class="product-card bg-white rounded-2xl overflow-hidden hover:shadow-lifted border border-cream-200 hover:border-earth-200 group block">
+          <div class="aspect-[4/3] overflow-hidden bg-cream-100">
             <img src="<%= p.cover %>" alt="<%= p.name %>" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
           </div>
-          <div class="p-5">
-            <h3 class="font-display font-bold text-xl text-forest-900 mb-1 group-hover:text-earth-700 transition"><%= p.name %></h3>
-            <p class="text-xs text-earth-600 font-semibold uppercase tracking-wide mb-3"><%= p.tagline %></p>
+          <div class="p-5 lg:p-6">
+            <div class="text-[10px] text-earth-700 font-semibold uppercase tracking-[0.18em] mb-2"><%= p.tagline %></div>
+            <h3 class="font-display font-bold text-xl text-forest-950 mb-2 tracking-tight"><%= p.name %></h3>
             <p class="text-sm text-forest-700 line-clamp-3 mb-4"><%= p.short %></p>
-            <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-forest-700 group-hover:text-earth-700">
+            <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-forest-900 group-hover:text-earth-700 transition">
               Xem chi tiết
-              <svg class="w-4 h-4 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </span>
           </div>
         </a>
@@ -120,28 +122,25 @@
 </section>
 
 <!-- QUY TRINH -->
-<section class="py-14 md:py-20 bg-forest-900 text-cream-50 relative overflow-hidden">
-  <div class="absolute inset-0 dot-pattern opacity-10"></div>
+<section class="py-16 md:py-24 bg-forest-950 text-white relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(212,146,41,0.12),transparent_60%)]"></div>
   <div class="relative max-w-7xl mx-auto px-4">
-    <div class="divider-leaf font-display font-semibold uppercase tracking-widest text-sm mb-3 text-earth-400">Quy trình làm việc</div>
-    <h2 class="text-center font-display font-bold text-3xl sm:text-4xl mb-12">Đơn giản - Minh bạch - Nhanh chóng</h2>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="text-center mb-12 md:mb-16">
+      <div class="text-earth-300 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Quy trình làm việc</div>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight">Đơn giản · Minh bạch · Nhanh chóng</h2>
+    </div>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
       <% const steps = [
         { n: '01', t: 'Tiếp nhận yêu cầu', d: 'Khách gọi hotline hoặc gửi form. Chúng tôi tư vấn loại cừ và mật độ phù hợp.' },
         { n: '02', t: 'Báo giá chi tiết', d: 'Báo giá theo cây/m³, ghi rõ kích thước, phí vận chuyển. Không phát sinh.' },
         { n: '03', t: 'Vận chuyển', d: 'Xe tải chuyên dụng, giao đúng giờ. Khách kiểm hàng tại công trình trước khi nhận.' },
         { n: '04', t: 'Hỗ trợ thi công', d: 'Tư vấn cách đóng cừ. Liên kết đội thi công uy tín nếu khách có nhu cầu.' },
       ]; %>
-      <% steps.forEach(function(s, i) { %>
-        <div class="relative">
-          <div class="font-display font-bold text-5xl text-earth-400/40 mb-2"><%= s.n %></div>
-          <h3 class="font-display font-bold text-xl mb-2"><%= s.t %></h3>
+      <% steps.forEach(function(s) { %>
+        <div class="relative pl-5 border-l border-earth-500/30">
+          <div class="font-display font-bold text-5xl text-earth-400 mb-3 -ml-5"><%= s.n %></div>
+          <h3 class="font-display font-bold text-xl mb-2 tracking-tight text-white"><%= s.t %></h3>
           <p class="text-sm text-cream-200 leading-relaxed"><%= s.d %></p>
-          <% if (i < 3) { %>
-            <div class="hidden lg:block absolute top-6 -right-4 text-earth-400/40">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-            </div>
-          <% } %>
         </div>
       <% }); %>
     </div>
@@ -150,27 +149,27 @@
 
 <!-- HOAT DONG -->
 <% if (activities.length) { %>
-<section class="py-14 md:py-20 bg-cream-50">
+<section class="py-16 md:py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="flex items-end justify-between mb-10 gap-4">
+    <div class="flex items-end justify-between mb-10 md:mb-12 gap-4">
       <div>
-        <div class="font-display font-semibold uppercase tracking-widest text-sm text-earth-600 mb-2">Hoạt động</div>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-forest-900">Công trình thực tế</h2>
+        <div class="text-earth-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Hoạt động</div>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-forest-950 tracking-tight">Công trình thực tế</h2>
       </div>
-      <a href="/hoat-dong" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-forest-700 hover:text-earth-700">
+      <a href="/hoat-dong" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-forest-900 hover:text-earth-700">
         Xem tất cả
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
       </a>
     </div>
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
       <% activities.forEach(function(a) { %>
-        <div class="relative aspect-[4/3] rounded-xl overflow-hidden group cursor-pointer" data-lightbox="<%= a.image_url %>">
-          <img src="<%= a.image_url %>" alt="<%= a.title %>" loading="lazy" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
-          <div class="absolute inset-0 bg-gradient-to-t from-forest-950/85 via-forest-950/30 to-transparent"></div>
-          <div class="absolute bottom-0 left-0 right-0 p-4 text-white">
-            <div class="font-bold text-base mb-1"><%= a.title %></div>
-            <% if (a.location) { %><div class="text-xs text-cream-200 flex items-center gap-1">
-              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+        <div class="relative aspect-[4/3] rounded-2xl overflow-hidden group cursor-pointer shadow-soft" data-lightbox="<%= a.image_url %>">
+          <img src="<%= a.image_url %>" alt="<%= a.title %>" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+          <div class="absolute inset-0 bg-gradient-to-t from-forest-950/90 via-forest-950/20 to-transparent"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-5 text-white">
+            <div class="font-semibold text-base mb-1 line-clamp-1"><%= a.title %></div>
+            <% if (a.location) { %><div class="text-xs text-cream-200 flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5 text-earth-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
               <%= a.location %>
             </div><% } %>
           </div>
@@ -178,7 +177,7 @@
       <% }); %>
     </div>
     <div class="mt-8 text-center sm:hidden">
-      <a href="/hoat-dong" class="inline-flex items-center gap-1.5 text-sm font-semibold text-forest-700">Xem tất cả công trình →</a>
+      <a href="/hoat-dong" class="inline-flex items-center gap-1.5 text-sm font-semibold text-forest-900">Xem tất cả công trình →</a>
     </div>
   </div>
 </section>
@@ -186,31 +185,31 @@
 
 <!-- TIN TUC -->
 <% if (news.length) { %>
-<section class="py-14 md:py-20 bg-cream-100">
+<section class="py-16 md:py-24 bg-cream-50">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="flex items-end justify-between mb-10 gap-4">
+    <div class="flex items-end justify-between mb-10 md:mb-12 gap-4">
       <div>
-        <div class="font-display font-semibold uppercase tracking-widest text-sm text-earth-600 mb-2">Tin tức</div>
-        <h2 class="font-display font-bold text-3xl sm:text-4xl text-forest-900">Bài viết mới nhất</h2>
+        <div class="text-earth-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Tin tức</div>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-forest-950 tracking-tight">Bài viết mới nhất</h2>
       </div>
-      <a href="/tin-tuc" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-forest-700 hover:text-earth-700">
+      <a href="/tin-tuc" class="hidden sm:inline-flex items-center gap-1.5 text-sm font-semibold text-forest-900 hover:text-earth-700">
         Tất cả bài viết
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
       </a>
     </div>
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="grid md:grid-cols-3 gap-5 md:gap-6">
       <% news.forEach(function(n) { %>
-        <article class="bg-white rounded-xl overflow-hidden border border-earth-100 hover:shadow-lg transition group">
-          <a href="/tin-tuc/<%= n.slug %>" class="block aspect-[16/10] overflow-hidden bg-forest-100">
+        <article class="bg-white rounded-2xl overflow-hidden border border-cream-200 hover:shadow-lifted hover:border-earth-200 transition group">
+          <a href="/tin-tuc/<%= n.slug %>" class="block aspect-[16/10] overflow-hidden bg-cream-100">
             <% if (n.cover_url) { %>
-              <img src="<%= n.cover_url %>" alt="<%= n.title %>" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition">
+              <img src="<%= n.cover_url %>" alt="<%= n.title %>" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
             <% } else { %>
-              <div class="w-full h-full bg-gradient-to-br from-forest-700 to-forest-900 flex items-center justify-center text-cream-50 font-display text-2xl">Dũng Đông</div>
+              <div class="w-full h-full bg-gradient-to-br from-forest-800 to-forest-950 flex items-center justify-center text-white font-display text-2xl">Dũng Đông</div>
             <% } %>
           </a>
-          <div class="p-5">
-            <div class="text-xs text-earth-600 mb-2"><%= new Date(n.created_at).toLocaleDateString('vi-VN') %></div>
-            <h3 class="font-display font-bold text-lg text-forest-900 mb-2 line-clamp-2 group-hover:text-earth-700 transition">
+          <div class="p-5 md:p-6">
+            <div class="text-xs text-earth-700 font-medium mb-2"><%= new Date(n.created_at).toLocaleDateString('vi-VN') %></div>
+            <h3 class="font-display font-bold text-xl text-forest-950 mb-2 line-clamp-2 tracking-tight group-hover:text-earth-700 transition">
               <a href="/tin-tuc/<%= n.slug %>"><%= n.title %></a>
             </h3>
             <p class="text-sm text-forest-700 line-clamp-3"><%= n.excerpt %></p>
@@ -223,19 +222,20 @@
 <% } %>
 
 <!-- CTA -->
-<section class="py-16 md:py-20 bg-gradient-to-br from-earth-700 to-earth-900 text-white relative overflow-hidden">
-  <div class="absolute inset-0 dot-pattern opacity-20"></div>
+<section class="py-16 md:py-24 bg-forest-950 text-white relative overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,146,41,0.15),transparent_70%)]"></div>
   <div class="relative max-w-4xl mx-auto px-4 text-center">
-    <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl mb-5">Cần báo giá cho công trình của bạn?</h2>
-    <p class="text-base sm:text-lg text-cream-100 mb-8 max-w-2xl mx-auto">Để lại thông tin hoặc gọi trực tiếp, chúng tôi sẽ tư vấn loại cừ phù hợp và báo giá trong vòng 30 phút.</p>
+    <div class="text-earth-300 font-semibold uppercase tracking-[0.2em] text-xs mb-4">Liên hệ</div>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight mb-5">Cần báo giá cho công trình<br class="hidden sm:block"> của bạn?</h2>
+    <p class="text-base sm:text-lg text-cream-200 mb-10 max-w-2xl mx-auto">Để lại thông tin hoặc gọi trực tiếp — chúng tôi tư vấn và báo giá trong vòng 30 phút.</p>
     <div class="flex flex-col sm:flex-row gap-3 justify-center">
-      <a href="tel:<%= company.hotline %>" class="inline-flex items-center justify-center gap-2 bg-white text-earth-800 hover:bg-cream-100 px-6 py-3.5 rounded-md font-bold shadow-lg transition">
+      <a href="tel:<%= company.hotline %>" class="inline-flex items-center justify-center gap-2 bg-earth-500 hover:bg-earth-600 text-white px-7 py-3.5 rounded-xl font-semibold shadow-soft transition">
         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
         Gọi <%= company.hotlineDisplay %>
       </a>
-      <a href="/lien-he" class="inline-flex items-center justify-center gap-2 bg-forest-900 hover:bg-forest-950 text-white px-6 py-3.5 rounded-md font-semibold shadow-lg transition">
+      <a href="/lien-he" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 border border-white/20 text-white px-7 py-3.5 rounded-xl font-semibold transition backdrop-blur">
         Gửi yêu cầu báo giá
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
       </a>
     </div>
   </div>

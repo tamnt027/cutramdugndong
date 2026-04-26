@@ -1,63 +1,61 @@
-<footer class="bg-forest-950 text-cream-100 mt-20">
-  <div class="max-w-7xl mx-auto px-4 py-14 grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-    <div>
-      <div class="flex items-center gap-3 mb-4">
-        <div class="w-12 h-12 rounded-full bg-earth-500 flex items-center justify-center font-display font-bold text-xl">DĐ</div>
+<footer class="bg-forest-950 text-cream-200 mt-0">
+  <div class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12">
+    <div class="lg:col-span-1">
+      <div class="flex items-center gap-3 mb-5">
+        <div class="w-12 h-12 rounded-xl bg-earth-500 flex items-center justify-center font-display font-bold text-xl text-white">DĐ</div>
         <div>
-          <div class="font-display font-bold text-lg">Dũng Đông</div>
-          <div class="text-xs text-earth-300 uppercase tracking-wider">Uy tín - Chất lượng</div>
+          <div class="font-display font-bold text-lg text-white tracking-tight">Dũng Đông</div>
+          <div class="text-[10px] text-earth-300 uppercase tracking-[0.18em]">Uy tín · Chất lượng</div>
         </div>
       </div>
-      <p class="text-sm text-cream-200 leading-relaxed">
-        <%= company.name %> - hơn 20 năm kinh nghiệm cung cấp cừ tràm, cừ bạch đàn, cừ dừa và lá dừa nước cho công trình xây dựng tại TP.HCM và các tỉnh lân cận.
+      <p class="text-sm text-cream-300 leading-relaxed">
+        Hơn 20 năm kinh nghiệm cung cấp cừ tràm, cừ bạch đàn, cừ dừa và lá dừa nước cho công trình xây dựng tại TP.HCM và các tỉnh lân cận.
       </p>
     </div>
 
     <div>
-      <h4 class="font-display font-bold text-base mb-4 text-earth-300">Sản phẩm</h4>
-      <ul class="space-y-2 text-sm">
+      <h4 class="font-display font-semibold text-sm uppercase tracking-[0.18em] mb-5 text-earth-300">Sản phẩm</h4>
+      <ul class="space-y-3 text-sm">
         <% products.forEach(function(p) { %>
-          <li><a href="/san-pham/<%= p.slug %>" class="hover:text-earth-300 transition">› <%= p.name %></a></li>
+          <li><a href="/san-pham/<%= p.slug %>" class="hover:text-earth-300 transition"><%= p.name %></a></li>
         <% }); %>
       </ul>
     </div>
 
     <div>
-      <h4 class="font-display font-bold text-base mb-4 text-earth-300">Liên kết</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/gioi-thieu" class="hover:text-earth-300 transition">› Giới thiệu công ty</a></li>
-        <li><a href="/dich-vu" class="hover:text-earth-300 transition">› Dịch vụ</a></li>
-        <li><a href="/hoat-dong" class="hover:text-earth-300 transition">› Hoạt động công trình</a></li>
-        <li><a href="/tin-tuc" class="hover:text-earth-300 transition">› Tin tức</a></li>
-        <li><a href="/lien-he" class="hover:text-earth-300 transition">› Yêu cầu báo giá</a></li>
+      <h4 class="font-display font-semibold text-sm uppercase tracking-[0.18em] mb-5 text-earth-300">Liên kết</h4>
+      <ul class="space-y-3 text-sm">
+        <li><a href="/gioi-thieu" class="hover:text-earth-300 transition">Giới thiệu</a></li>
+        <li><a href="/dich-vu" class="hover:text-earth-300 transition">Dịch vụ</a></li>
+        <li><a href="/hoat-dong" class="hover:text-earth-300 transition">Hoạt động</a></li>
+        <li><a href="/tin-tuc" class="hover:text-earth-300 transition">Tin tức</a></li>
+        <li><a href="/lien-he" class="hover:text-earth-300 transition">Yêu cầu báo giá</a></li>
       </ul>
     </div>
 
     <div>
-      <h4 class="font-display font-bold text-base mb-4 text-earth-300">Liên hệ</h4>
-      <ul class="space-y-3 text-sm">
-        <li class="flex gap-2">
-          <svg class="w-5 h-5 flex-shrink-0 text-earth-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+      <h4 class="font-display font-semibold text-sm uppercase tracking-[0.18em] mb-5 text-earth-300">Liên hệ</h4>
+      <ul class="space-y-4 text-sm">
+        <li class="flex gap-3">
+          <svg class="w-5 h-5 flex-shrink-0 text-earth-400 mt-0.5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
           <span><%= company.address %></span>
         </li>
-        <li class="flex gap-2">
+        <li class="flex gap-3 items-center">
           <svg class="w-5 h-5 flex-shrink-0 text-earth-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
-          <a href="tel:<%= company.hotline %>" class="hover:text-earth-300 font-semibold"><%= company.hotlineDisplay %></a>
+          <a href="tel:<%= company.hotline %>" class="hover:text-earth-300 font-semibold text-white"><%= company.hotlineDisplay %></a>
         </li>
-        <li class="flex gap-2">
-          <svg class="w-5 h-5 flex-shrink-0 text-earth-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+        <li class="flex gap-3 items-center">
+          <svg class="w-5 h-5 flex-shrink-0 text-earth-400" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
           <a href="mailto:<%= company.email %>" class="hover:text-earth-300"><%= company.email %></a>
         </li>
       </ul>
     </div>
   </div>
 
-  <div class="border-t border-forest-800">
-    <div class="max-w-7xl mx-auto px-4 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream-200">
-      <div>© <%= year %> <%= company.name %>. Bản quyền thuộc về công ty.</div>
-      <div class="flex items-center gap-4">
-        <span>Phương châm: <strong class="text-earth-300">UY TÍN - CHẤT LƯỢNG - GIÁ HỢP LÝ</strong></span>
-      </div>
+  <div class="border-t border-forest-900">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream-300">
+      <div>© <%= year %> <%= company.name %></div>
+      <div>Phương châm: <strong class="text-earth-300">Uy tín · Chất lượng · Giá hợp lý</strong></div>
     </div>
   </div>
 </footer>

@@ -1,66 +1,72 @@
 <%- include('../partials/head') %>
 <%- include('../partials/page-hero', { pageTitle: 'Giới thiệu công ty', pageSubtitle: 'Hơn 20 năm gắn bó với nghề cừ - Uy tín tạo nên thương hiệu Dũng Đông' }) %>
 
-<section class="py-12 md:py-16">
-  <div class="max-w-5xl mx-auto px-4 grid lg:grid-cols-5 gap-10 items-start">
+<section class="py-16 md:py-20">
+  <div class="max-w-5xl mx-auto px-4 grid lg:grid-cols-5 gap-10 lg:gap-14 items-start">
     <div class="lg:col-span-2">
-      <div class="aspect-[4/5] rounded-xl overflow-hidden shadow-xl border-4 border-earth-500/30 sticky top-28">
-        <img src="https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=800&q=85" alt="Cừ tràm Dũng Đông" class="w-full h-full object-cover">
+      <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-lifted lg:sticky lg:top-28">
+        <img src="/img/site/hero/hero-2.jpg" alt="Cừ tràm Dũng Đông" class="w-full h-full object-cover">
       </div>
     </div>
     <div class="lg:col-span-3">
-      <div class="font-display font-semibold uppercase tracking-widest text-sm text-earth-600 mb-3">Về chúng tôi</div>
-      <h2 class="font-display font-bold text-3xl sm:text-4xl text-forest-900 mb-5"><%= company.name %></h2>
+      <div class="text-earth-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Về chúng tôi</div>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-forest-950 tracking-tight mb-6"><%= company.name %></h2>
       <div class="space-y-4 text-forest-800 leading-relaxed">
-        <p>Khởi nguồn từ nghề cung cấp cừ tràm cho các công trình tại miền Đông và Tây Nam Bộ, <strong>Dũng Đông</strong> đã có hơn 20 năm gắn bó với cây cừ - vật liệu truyền thống nhưng vẫn không thể thay thế trong gia cố nền móng nhà phố và công trình quy mô vừa.</p>
-        <p>Chúng tôi hiểu rằng mỗi công trình có yêu cầu khác nhau: nhà phố cần cừ thẳng dài 4m, kè ao cần cừ dừa dài 6-8m, mái lá cần lá dừa nước tươi đúng vụ. Vì vậy chúng tôi <strong>tuyển chọn từ nguồn</strong>, đảm bảo đúng kích thước và chất lượng đã cam kết.</p>
-        <p>Phương châm của Dũng Đông gói gọn trong 3 từ: <strong class="text-earth-700">UY TÍN - CHẤT LƯỢNG - GIÁ HỢP LÝ</strong>. Điều này không chỉ là khẩu hiệu mà là cam kết được khách hàng kiểm chứng qua hàng nghìn công trình lớn nhỏ trong suốt hai thập kỷ.</p>
+        <p>Khởi nguồn từ nghề cung cấp cừ tràm cho các công trình tại miền Đông và Tây Nam Bộ, <strong class="text-forest-950">Dũng Đông</strong> đã có hơn 20 năm gắn bó với cây cừ — vật liệu truyền thống nhưng vẫn không thể thay thế trong gia cố nền móng nhà phố và công trình quy mô vừa.</p>
+        <p>Chúng tôi hiểu rằng mỗi công trình có yêu cầu khác nhau: nhà phố cần cừ thẳng dài 4m, kè ao cần cừ dừa dài 6-8m, mái lá cần lá dừa nước tươi đúng vụ. Vì vậy chúng tôi <strong class="text-forest-950">tuyển chọn từ nguồn</strong>, đảm bảo đúng kích thước và chất lượng đã cam kết.</p>
+        <p>Phương châm của Dũng Đông gói gọn trong 3 từ: <strong class="text-earth-700">Uy tín · Chất lượng · Giá hợp lý</strong>. Điều này không chỉ là khẩu hiệu mà là cam kết được khách hàng kiểm chứng qua hàng nghìn công trình lớn nhỏ trong suốt hai thập kỷ.</p>
       </div>
 
-      <div class="mt-8 grid sm:grid-cols-3 gap-4">
-        <div class="bg-cream-100 rounded-lg p-4 border-l-4 border-earth-500">
-          <div class="font-display font-bold text-2xl text-forest-900">20+</div>
-          <div class="text-sm text-forest-700">Năm kinh nghiệm</div>
+      <div class="mt-10 grid sm:grid-cols-3 gap-4">
+        <div class="bg-cream-50 rounded-2xl p-5 border border-cream-200">
+          <div class="font-display font-bold text-3xl text-forest-950">20<span class="text-earth-500">+</span></div>
+          <div class="text-sm text-forest-700 mt-1">Năm kinh nghiệm</div>
         </div>
-        <div class="bg-cream-100 rounded-lg p-4 border-l-4 border-forest-500">
-          <div class="font-display font-bold text-2xl text-forest-900">1000+</div>
-          <div class="text-sm text-forest-700">Công trình đã giao</div>
+        <div class="bg-cream-50 rounded-2xl p-5 border border-cream-200">
+          <div class="font-display font-bold text-3xl text-forest-950">1000<span class="text-earth-500">+</span></div>
+          <div class="text-sm text-forest-700 mt-1">Công trình</div>
         </div>
-        <div class="bg-cream-100 rounded-lg p-4 border-l-4 border-earth-500">
-          <div class="font-display font-bold text-2xl text-forest-900">6</div>
-          <div class="text-sm text-forest-700">Tỉnh thành phục vụ</div>
+        <div class="bg-cream-50 rounded-2xl p-5 border border-cream-200">
+          <div class="font-display font-bold text-3xl text-forest-950">6</div>
+          <div class="text-sm text-forest-700 mt-1">Tỉnh thành</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="py-12 md:py-16 bg-cream-100">
+<section class="py-16 md:py-20 bg-cream-50">
   <div class="max-w-5xl mx-auto px-4">
-    <h2 class="font-display font-bold text-3xl text-forest-900 mb-8 text-center">Giá trị cốt lõi</h2>
+    <div class="text-center mb-12">
+      <div class="text-earth-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Giá trị</div>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl text-forest-950 tracking-tight">Giá trị cốt lõi</h2>
+    </div>
     <div class="grid md:grid-cols-3 gap-5">
       <% [
-        { t: 'Uy tín', d: 'Đã hứa là làm. Báo giá đúng, giao hàng đúng hẹn, đúng chất lượng.', i: '🤝' },
-        { t: 'Chất lượng', d: 'Cừ tuyển chọn từ nguồn, loại bỏ cây cong, cây mục trước khi giao.', i: '✓' },
-        { t: 'Giá hợp lý', d: 'Cắt giảm trung gian, đưa giá tốt nhất khu vực đến tay khách hàng.', i: '💰' },
+        { t: 'Uy tín', d: 'Đã hứa là làm. Báo giá đúng, giao hàng đúng hẹn, đúng chất lượng.', svg: 'M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z' },
+        { t: 'Chất lượng', d: 'Cừ tuyển chọn từ nguồn, loại bỏ cây cong, cây mục trước khi giao.', svg: 'M5 13l4 4L19 7' },
+        { t: 'Giá hợp lý', d: 'Cắt giảm trung gian, đưa giá tốt nhất khu vực đến tay khách hàng.', svg: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
       ].forEach(function(v) { %>
-        <div class="bg-white rounded-xl p-6 text-center border border-earth-100">
-          <div class="text-5xl mb-4"><%= v.i %></div>
-          <h3 class="font-display font-bold text-xl text-forest-900 mb-2"><%= v.t %></h3>
-          <p class="text-sm text-forest-700"><%= v.d %></p>
+        <div class="bg-white rounded-2xl p-7 border border-cream-200">
+          <div class="w-12 h-12 rounded-xl bg-forest-900 text-white flex items-center justify-center mb-5">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="<%= v.svg %>"/></svg>
+          </div>
+          <h3 class="font-display font-bold text-xl text-forest-950 mb-2 tracking-tight"><%= v.t %></h3>
+          <p class="text-sm text-forest-700 leading-relaxed"><%= v.d %></p>
         </div>
       <% }); %>
     </div>
   </div>
 </section>
 
-<section class="py-12 md:py-16">
+<section class="py-16 md:py-20">
   <div class="max-w-5xl mx-auto px-4 text-center">
-    <h2 class="font-display font-bold text-3xl text-forest-900 mb-4">Phạm vi phục vụ</h2>
-    <p class="text-forest-700 mb-8">Chúng tôi nhận giao hàng tận công trình trong khu vực sau:</p>
+    <div class="text-earth-700 font-semibold uppercase tracking-[0.2em] text-xs mb-3">Phạm vi</div>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl text-forest-950 tracking-tight mb-4">Phạm vi phục vụ</h2>
+    <p class="text-forest-700 mb-10">Chúng tôi nhận giao hàng tận công trình trong khu vực sau:</p>
     <div class="flex flex-wrap justify-center gap-3">
       <% ['TP.HCM', 'Bình Dương', 'Long An', 'Đồng Nai', 'Bình Phước', 'Tây Ninh'].forEach(function(p) { %>
-        <span class="px-5 py-2.5 bg-forest-700 text-cream-50 rounded-full font-semibold text-sm shadow"><%= p %></span>
+        <span class="px-5 py-2.5 bg-white border border-cream-200 text-forest-900 rounded-full font-semibold text-sm shadow-soft"><%= p %></span>
       <% }); %>
     </div>
     <p class="mt-6 text-sm text-forest-600">Khu vực khác vui lòng liên hệ hotline <strong class="text-earth-700"><%= company.hotlineDisplay %></strong> để được tư vấn.</p>

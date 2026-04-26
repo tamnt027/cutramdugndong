@@ -1,5 +1,5 @@
-// Du lieu san pham tinh - 4 loai chinh, hiem khi thay doi
-// Anh dung Unsplash placeholder, sau co the thay bang anh that
+// Du lieu san pham tinh - 4 loai chinh
+// Anh local trong /public/img/site/products
 
 export const products = [
   {
@@ -7,11 +7,11 @@ export const products = [
     name: 'Cừ tràm',
     tagline: 'Gia cố nền móng - tuổi thọ 60+ năm',
     short: 'Cừ tràm loại 1 tuyển chọn, dài 3.7-4.5m, đường kính gốc 8-12cm. Thân thẳng, vỏ tươi, đảm bảo chất lượng cho công trình nhà phố, nhà xưởng.',
-    cover: 'https://images.unsplash.com/photo-1518049362265-d5b2a6467637?w=1600&q=80',
+    cover: '/img/site/products/cu-tram-1.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1448630360428-65456885c650?w=1200&q=80',
-      'https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1200&q=80',
-      'https://images.unsplash.com/photo-1590725140246-20acdee442be?w=1200&q=80',
+      '/img/site/products/cu-tram-2.jpg',
+      '/img/site/products/cu-tram-3.jpg',
+      '/img/site/products/cu-tram-4.jpg',
     ],
     specs: [
       { label: 'Chiều dài', value: '3.7m - 4.5m' },
@@ -43,10 +43,10 @@ export const products = [
     name: 'Cừ bạch đàn',
     tagline: 'Cứng cáp - giá rẻ - giao số lượng lớn',
     short: 'Cừ bạch đàn các loại 3-6m, thân thẳng, gỗ cứng. Phù hợp công trình cần độ cứng cao, làm cọc chống, cọc xây dựng tạm.',
-    cover: 'https://images.unsplash.com/photo-1503602642458-232111445657?w=1600&q=80',
+    cover: '/img/site/products/cu-bach-dan-1.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1503387837-b154d5074bd2?w=1200&q=80',
-      'https://images.unsplash.com/photo-1542856391-010fb87dcfed?w=1200&q=80',
+      '/img/site/products/cu-bach-dan-2.jpg',
+      '/img/site/products/cu-bach-dan-3.jpg',
     ],
     specs: [
       { label: 'Chiều dài', value: '3m - 6m' },
@@ -77,10 +77,10 @@ export const products = [
     name: 'Cừ dừa',
     tagline: 'Bền nước - chuyên kè bờ',
     short: 'Cừ dừa dài 5m, 6m, 7m, 8m. Thân thẳng đặc trưng, chống mục nước cực tốt, là lựa chọn số 1 cho kè bờ kênh, ao nuôi thủy sản.',
-    cover: 'https://images.unsplash.com/photo-1473445730015-841f29a9490b?w=1600&q=80',
+    cover: '/img/site/products/cu-dua-1.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200&q=80',
-      'https://images.unsplash.com/photo-1545486332-9e0999c535b2?w=1200&q=80',
+      '/img/site/products/cu-dua-2.jpg',
+      '/img/site/products/cu-dua-3.jpg',
     ],
     specs: [
       { label: 'Chiều dài', value: '5m / 6m / 7m / 8m' },
@@ -112,10 +112,10 @@ export const products = [
     name: 'Lá dừa nước',
     tagline: 'Mái lá truyền thống - mát mẻ tự nhiên',
     short: 'Lá dừa nước tươi, bền màu, dùng lợp mái nhà chòi, quán cà phê sân vườn, khu du lịch sinh thái. Giao tận nơi toàn TP.HCM và lân cận.',
-    cover: 'https://images.unsplash.com/photo-1510629389923-69aedf07c5e7?w=1600&q=80',
+    cover: '/img/site/products/la-dua-1.jpg',
     gallery: [
-      'https://images.unsplash.com/photo-1542856391-010fb87dcfed?w=1200&q=80',
-      'https://images.unsplash.com/photo-1505159940484-eb2b9f2588e2?w=1200&q=80',
+      '/img/site/products/la-dua-2.jpg',
+      '/img/site/products/la-dua-3.jpg',
     ],
     specs: [
       { label: 'Chiều dài lá', value: '1.5m - 2m' },

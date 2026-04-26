@@ -25,13 +25,20 @@
       theme: {
         extend: {
           colors: {
-            forest: { 50:'#f3f7f1',100:'#e2ebdc',200:'#c4d7b9',300:'#9dbb8c',400:'#789c64',500:'#5a8048',600:'#446338',700:'#374f2e',800:'#2e4127',900:'#283621',950:'#131e0f' },
-            earth:  { 50:'#fbf6ec',100:'#f4e7c8',200:'#e9cd8d',300:'#dfb05a',400:'#d59a3c',500:'#c5802b',600:'#a86223',700:'#874721',800:'#703a22',900:'#5f3220',950:'#36190d' },
-            cream:  { 50:'#fbf8f1',100:'#f5efde',200:'#ede1c2',500:'#d6c89a' }
+            // Forest: deep emerald-tinted green - modern, clean, premium
+            forest: { 50:'#f0f9f4',100:'#dcefe1',200:'#bbdec7',300:'#8cc4a4',400:'#5ea27d',500:'#3f855f',600:'#2e6a4a',700:'#26553c',800:'#204432',900:'#1b382b',950:'#0d1f17' },
+            // Earth: warm amber/champagne gold - modern accent
+            earth:  { 50:'#fdfaf3',100:'#faf0d9',200:'#f4dfaa',300:'#ecc775',400:'#e3ad48',500:'#d49229',600:'#b8761f',700:'#94591c',800:'#79471d',900:'#653b1c',950:'#391d0c' },
+            // Cream: warm stone neutral - off-white background
+            cream:  { 50:'#fafaf8',100:'#f4f3ee',200:'#e8e6dd',300:'#d4d0c1',500:'#8b8678' }
           },
           fontFamily: {
-            display: ['"Playfair Display"', 'Georgia', 'serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif']
+            display: ['"Fraunces"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif']
+          },
+          boxShadow: {
+            'soft': '0 1px 2px 0 rgb(13 31 23 / 0.04), 0 4px 16px -4px rgb(13 31 23 / 0.06)',
+            'lifted': '0 8px 24px -8px rgb(13 31 23 / 0.12), 0 2px 6px -2px rgb(13 31 23 / 0.06)',
           }
         }
       }
@@ -39,7 +46,7 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/site.css">
 
   <% if (typeof structuredData !== 'undefined' && structuredData) { %>

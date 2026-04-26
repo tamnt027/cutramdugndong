@@ -1,16 +1,14 @@
-<section class="relative bg-gradient-to-br from-forest-800 to-forest-950 text-cream-50 py-12 md:py-20 overflow-hidden">
-  <div class="absolute inset-0 dot-pattern opacity-15"></div>
-  <div class="absolute -top-10 -right-10 w-64 h-64 bg-earth-500 rounded-full blur-3xl opacity-20"></div>
+<section class="relative bg-cream-50 border-b border-cream-200 py-12 md:py-16 overflow-hidden">
+  <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,146,41,0.06),transparent_60%)]"></div>
   <div class="relative max-w-7xl mx-auto px-4 text-center">
-    <nav class="text-xs sm:text-sm text-cream-200 mb-3 flex items-center justify-center gap-2 flex-wrap">
-      <a href="/" class="hover:text-earth-300">Trang chủ</a>
-      <span>›</span>
-      <span class="text-earth-300"><%= pageTitle %></span>
+    <nav class="text-xs sm:text-sm text-forest-600 mb-4 flex items-center justify-center gap-2 flex-wrap">
+      <a href="/" class="hover:text-earth-700">Trang chủ</a>
+      <span class="text-cream-500">›</span>
+      <span class="text-earth-700 font-medium"><%= pageTitle %></span>
     </nav>
-    <h1 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl mb-3"><%= pageTitle %></h1>
+    <h1 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl tracking-tight text-forest-950 mb-3"><%= pageTitle %></h1>
     <% if (typeof pageSubtitle !== 'undefined' && pageSubtitle) { %>
-      <p class="text-base sm:text-lg text-cream-200 max-w-2xl mx-auto"><%= pageSubtitle %></p>
+      <p class="text-base sm:text-lg text-forest-700 max-w-2xl mx-auto"><%= pageSubtitle %></p>
     <% } %>
   </div>
-  <div class="wood-strip mt-12"></div>
 </section>
