@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= typeof title !== 'undefined' && title ? title + ' | ' + company.name : company.name + ' - Cừ tràm, Cừ bạch đàn, Cừ dừa, Lá dừa nước' %></title>
+  <meta name="description" content="<%= typeof description !== 'undefined' && description ? description : 'Chuyên cung cấp cừ tràm, cừ bạch đàn, cừ dừa, lá dừa nước cho công trình tại TP.HCM, Bình Dương, Long An, Đồng Nai. Hơn 20 năm kinh nghiệm. Giá cạnh tranh, giao hàng tận nơi.' %>">
+  <meta name="keywords" content="cừ tràm, cừ bạch đàn, cừ dừa, lá dừa nước, gia cố nền móng, kè bờ kênh, bán cừ tràm tphcm, công ty dũng đông">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="<%= siteUrl + currentPath %>">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="<%= typeof title !== 'undefined' && title ? title : company.name %>">
+  <meta property="og:description" content="<%= typeof description !== 'undefined' && description ? description : 'Chuyên cung cấp cừ tràm và các loại cừ xây dựng. Hơn 20 năm kinh nghiệm.' %>">
+  <meta property="og:url" content="<%= siteUrl + currentPath %>">
+  <meta property="og:image" content="<%= typeof ogImage !== 'undefined' && ogImage ? ogImage : siteUrl + '/img/og-default.svg' %>">
+  <meta property="og:locale" content="vi_VN">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+
+  <script src="https://cdn.tailwindcss.com?plugins=typography,forms"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: { 50:'#f3f7f1',100:'#e2ebdc',200:'#c4d7b9',300:'#9dbb8c',400:'#789c64',500:'#5a8048',600:'#446338',700:'#374f2e',800:'#2e4127',900:'#283621',950:'#131e0f' },
+            earth:  { 50:'#fbf6ec',100:'#f4e7c8',200:'#e9cd8d',300:'#dfb05a',400:'#d59a3c',500:'#c5802b',600:'#a86223',700:'#874721',800:'#703a22',900:'#5f3220',950:'#36190d' },
+            cream:  { 50:'#fbf8f1',100:'#f5efde',200:'#ede1c2',500:'#d6c89a' }
+          },
+          fontFamily: {
+            display: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/site.css">
+
+  <% if (typeof structuredData !== 'undefined' && structuredData) { %>
+    <script type="application/ld+json"><%- JSON.stringify(structuredData) %></script>
+  <% } %>
+</head>
+<body class="bg-cream-50 text-forest-950 font-sans antialiased">
+  <%- include('topbar') %>
+  <%- include('header') %>
+
+  <% if (flash) { %>
+    <div class="bg-forest-700 text-cream-50 text-center py-2 text-sm font-medium">
+      <%= flash.message %>
+    </div>
+  <% } %>
+
+  <main>

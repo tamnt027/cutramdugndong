@@ -1,0 +1,14 @@
+<div class="fixed bottom-5 right-5 z-50 flex flex-col gap-3">
+  <a href="https://zalo.me/<%= company.zalo %>" target="_blank" rel="noopener" class="group relative w-14 h-14 rounded-full bg-[#0068ff] hover:bg-[#0050cc] text-white flex items-center justify-center shadow-lg transition" aria-label="Chat Zalo">
+    <span class="absolute right-full mr-3 px-3 py-1.5 bg-forest-900 text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition pointer-events-none">Chat Zalo</span>
+    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.486 2 2 5.928 2 10.755c0 2.756 1.476 5.214 3.785 6.829v3.103c0 .328.394.49.621.255l2.27-2.358c1.06.282 2.182.43 3.324.43 5.514 0 10-3.928 10-8.755S17.514 2 12 2z"/></svg>
+  </a>
+  <a href="https://m.me/" target="_blank" rel="noopener" class="group relative w-14 h-14 rounded-full bg-[#0084ff] hover:bg-[#006acc] text-white flex items-center justify-center shadow-lg transition" aria-label="Messenger">
+    <span class="absolute right-full mr-3 px-3 py-1.5 bg-forest-900 text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition pointer-events-none">Messenger</span>
+    <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.145 2 11.243c0 2.913 1.466 5.51 3.756 7.218V22l3.43-1.882c.918.254 1.89.39 2.814.39 5.523 0 10-4.145 10-9.243S17.523 2 12 2zm1.07 12.41l-2.526-2.692-4.937 2.692L10.95 9.07l2.59 2.692 4.873-2.692-5.342 5.34z"/></svg>
+  </a>
+  <a href="tel:<%= company.hotline %>" class="group relative w-14 h-14 rounded-full bg-earth-500 hover:bg-earth-600 text-white flex items-center justify-center shadow-lg transition animate-pulse" aria-label="Gọi ngay">
+    <span class="absolute right-full mr-3 px-3 py-1.5 bg-forest-900 text-white text-xs rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition pointer-events-none"><%= company.hotlineDisplay %></span>
+    <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+  </a>
+</div>

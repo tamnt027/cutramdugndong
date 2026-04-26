@@ -1,0 +1,127 @@
+<%- include('../partials/head') %>
+<%- include('../partials/page-hero', { pageTitle: 'Liên hệ - Yêu cầu báo giá', pageSubtitle: 'Để lại thông tin, chúng tôi sẽ liên hệ và báo giá trong vòng 30 phút' }) %>
+
+<section class="py-12 md:py-16">
+  <div class="max-w-6xl mx-auto px-4 grid lg:grid-cols-5 gap-8">
+    <!-- Form -->
+    <div class="lg:col-span-3">
+      <div class="bg-white rounded-2xl p-6 sm:p-8 border border-earth-100 shadow-sm">
+        <% if (success) { %>
+          <div class="mb-5 bg-forest-50 border border-forest-200 text-forest-800 rounded-lg p-4 flex items-start gap-3">
+            <svg class="w-5 h-5 flex-shrink-0 mt-0.5 text-forest-700" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <div>
+              <div class="font-semibold">Đã gửi yêu cầu thành công!</div>
+              <div class="text-sm mt-1">Cảm ơn bạn. Chúng tôi sẽ liên hệ trong thời gian sớm nhất.</div>
+            </div>
+          </div>
+        <% } %>
+
+        <h2 class="font-display font-bold text-2xl text-forest-900 mb-2">Gửi yêu cầu báo giá</h2>
+        <p class="text-sm text-forest-700 mb-6">Các trường có dấu <span class="text-red-600">*</span> là bắt buộc.</p>
+
+        <form method="POST" action="/lien-he" class="space-y-4">
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-forest-900 mb-1.5">Họ và tên <span class="text-red-600">*</span></label>
+              <input type="text" name="name" required maxlength="100" class="w-full px-4 py-3 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none transition" placeholder="Nguyễn Văn A">
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-forest-900 mb-1.5">Số điện thoại <span class="text-red-600">*</span></label>
+              <input type="tel" name="phone" required pattern="[\d\s+\-().]{8,20}" maxlength="30" class="w-full px-4 py-3 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none transition" placeholder="0909 xxx xxx">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-forest-900 mb-1.5">Email</label>
+            <input type="email" name="email" maxlength="100" class="w-full px-4 py-3 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none transition" placeholder="email@example.com">
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold text-forest-900 mb-1.5">Sản phẩm quan tâm</label>
+              <select name="product" class="w-full px-4 py-3 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none transition bg-white">
+                <option value="">— Chọn sản phẩm —</option>
+                <% products.forEach(function(p) { %>
+                  <option value="<%= p.slug %>" <%= selectedProduct === p.slug ? 'selected' : '' %>><%= p.name %></option>
+                <% }); %>
+                <option value="khac" <%= selectedProduct === 'khac' ? 'selected' : '' %>>Khác</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-forest-900 mb-1.5">Số lượng / quy cách</label>
+              <input type="text" name="quantity" maxlength="100" class="w-full px-4 py-3 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none transition" placeholder="VD: 500 cây 4m">
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm font-semibold text-forest-900 mb-1.5">Mô tả công trình / yêu cầu thêm</label>
+            <textarea name="message" rows="4" maxlength="2000" class="w-full px-4 py-3 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none transition resize-none" placeholder="Địa chỉ giao hàng, ngày cần nhận, các yêu cầu khác..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-earth-500 hover:bg-earth-600 text-white px-8 py-3.5 rounded-md font-bold shadow-lg transition">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Gửi yêu cầu báo giá
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Thong tin lien he -->
+    <div class="lg:col-span-2 space-y-4">
+      <div class="bg-forest-900 text-cream-50 rounded-2xl p-6">
+        <h3 class="font-display font-bold text-xl mb-4 text-earth-300">Liên hệ trực tiếp</h3>
+        <div class="space-y-4 text-sm">
+          <a href="tel:<%= company.hotline %>" class="flex items-start gap-3 hover:text-earth-300 transition">
+            <div class="w-10 h-10 rounded-full bg-earth-500/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-earth-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+            </div>
+            <div>
+              <div class="text-cream-200 text-xs uppercase tracking-wide">Hotline</div>
+              <div class="font-bold text-base"><%= company.hotlineDisplay %></div>
+            </div>
+          </a>
+          <a href="mailto:<%= company.email %>" class="flex items-start gap-3 hover:text-earth-300 transition">
+            <div class="w-10 h-10 rounded-full bg-earth-500/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-earth-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+            </div>
+            <div>
+              <div class="text-cream-200 text-xs uppercase tracking-wide">Email</div>
+              <div class="font-semibold break-all"><%= company.email %></div>
+            </div>
+          </a>
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 rounded-full bg-earth-500/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-earth-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            </div>
+            <div>
+              <div class="text-cream-200 text-xs uppercase tracking-wide">Địa chỉ</div>
+              <div><%= company.address %></div>
+            </div>
+          </div>
+          <a href="https://zalo.me/<%= company.zalo %>" target="_blank" rel="noopener" class="flex items-start gap-3 hover:text-earth-300 transition">
+            <div class="w-10 h-10 rounded-full bg-earth-500/20 flex items-center justify-center flex-shrink-0">
+              <svg class="w-5 h-5 text-earth-400" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 5.928 2 10.755c0 2.756 1.476 5.214 3.785 6.829v3.103c0 .328.394.49.621.255l2.27-2.358c1.06.282 2.182.43 3.324.43 5.514 0 10-3.928 10-8.755S17.514 2 12 2z"/></svg>
+            </div>
+            <div>
+              <div class="text-cream-200 text-xs uppercase tracking-wide">Zalo</div>
+              <div class="font-semibold">Chat ngay với tư vấn viên</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-cream-100 rounded-2xl p-6 border border-earth-200">
+        <h3 class="font-display font-bold text-base text-forest-900 mb-2">Giờ làm việc</h3>
+        <div class="text-sm text-forest-700 space-y-1">
+          <div class="flex justify-between"><span>Thứ 2 - Thứ 7</span><span class="font-semibold">7:00 - 18:00</span></div>
+          <div class="flex justify-between"><span>Chủ nhật</span><span class="font-semibold">8:00 - 12:00</span></div>
+        </div>
+        <p class="text-xs text-forest-600 mt-3">Hotline tiếp nhận 24/7 cho công trình khẩn cấp.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%- include('../partials/foot') %>

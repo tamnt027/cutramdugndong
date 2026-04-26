@@ -1,0 +1,53 @@
+<%- include('_shell') %>
+
+<div class="mb-5 flex items-center justify-between">
+  <p class="text-sm text-forest-700">Tổng <%= items.length %> bài viết</p>
+  <a href="/admin/news/new" class="inline-flex items-center gap-2 bg-forest-700 hover:bg-forest-800 text-white px-4 py-2.5 rounded-md font-semibold text-sm shadow transition">
+    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
+    Thêm bài viết
+  </a>
+</div>
+
+<div class="bg-white rounded-xl border border-earth-100 overflow-hidden">
+  <div class="overflow-x-auto">
+    <table class="w-full text-sm">
+      <thead class="bg-forest-50 text-forest-900 text-left">
+        <tr>
+          <th class="px-4 py-3 font-semibold">Tiêu đề</th>
+          <th class="px-4 py-3 font-semibold whitespace-nowrap">Trạng thái</th>
+          <th class="px-4 py-3 font-semibold whitespace-nowrap">Ngày tạo</th>
+          <th class="px-4 py-3 font-semibold text-right">Hành động</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% if (!items.length) { %>
+          <tr><td colspan="4" class="px-4 py-10 text-center text-forest-600">Chưa có bài viết nào.</td></tr>
+        <% } %>
+        <% items.forEach(function(it) { %>
+          <tr class="border-t border-earth-100 hover:bg-cream-50">
+            <td class="px-4 py-3">
+              <div class="font-semibold text-forest-900"><%= it.title %></div>
+              <a href="/tin-tuc/<%= it.slug %>" target="_blank" class="text-xs text-earth-700 hover:underline">/tin-tuc/<%= it.slug %></a>
+            </td>
+            <td class="px-4 py-3">
+              <% if (it.published) { %>
+                <span class="inline-block px-2 py-0.5 bg-forest-100 text-forest-800 rounded text-xs font-semibold">Đã đăng</span>
+              <% } else { %>
+                <span class="inline-block px-2 py-0.5 bg-gray-100 text-gray-600 rounded text-xs font-semibold">Bản nháp</span>
+              <% } %>
+            </td>
+            <td class="px-4 py-3 text-forest-700 whitespace-nowrap"><%= new Date(it.created_at).toLocaleDateString('vi-VN') %></td>
+            <td class="px-4 py-3 text-right whitespace-nowrap">
+              <a href="/admin/news/<%= it.id %>/edit" class="inline-block px-3 py-1.5 text-forest-700 hover:bg-forest-50 rounded text-xs font-semibold">Sửa</a>
+              <form method="POST" action="/admin/news/<%= it.id %>/delete" class="inline" onsubmit="return confirm('Xóa bài viết này?')">
+                <button class="px-3 py-1.5 text-red-700 hover:bg-red-50 rounded text-xs font-semibold">Xóa</button>
+              </form>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<%- include('_foot') %>

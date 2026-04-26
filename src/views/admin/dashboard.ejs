@@ -1,0 +1,45 @@
+<%- include('_shell') %>
+
+<div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+  <div class="bg-white rounded-xl p-5 border border-earth-100">
+    <div class="text-xs text-forest-600 uppercase tracking-wider mb-1">Bài viết</div>
+    <div class="font-bold text-3xl text-forest-900"><%= stats.news %></div>
+    <a href="/admin/news" class="text-xs text-earth-700 hover:underline mt-2 inline-block">Quản lý →</a>
+  </div>
+  <div class="bg-white rounded-xl p-5 border border-earth-100">
+    <div class="text-xs text-forest-600 uppercase tracking-wider mb-1">Hoạt động</div>
+    <div class="font-bold text-3xl text-forest-900"><%= stats.activities %></div>
+    <a href="/admin/activities" class="text-xs text-earth-700 hover:underline mt-2 inline-block">Quản lý →</a>
+  </div>
+  <div class="bg-white rounded-xl p-5 border border-earth-100">
+    <div class="text-xs text-forest-600 uppercase tracking-wider mb-1">Yêu cầu báo giá</div>
+    <div class="font-bold text-3xl text-forest-900"><%= stats.contacts %></div>
+    <a href="/admin/contacts" class="text-xs text-earth-700 hover:underline mt-2 inline-block">Xem tất cả →</a>
+  </div>
+  <div class="bg-earth-500 rounded-xl p-5 text-white">
+    <div class="text-xs uppercase tracking-wider mb-1 opacity-80">Chưa xử lý</div>
+    <div class="font-bold text-3xl"><%= stats.unread %></div>
+    <a href="/admin/contacts" class="text-xs underline mt-2 inline-block">Xử lý ngay →</a>
+  </div>
+</div>
+
+<div class="bg-white rounded-xl p-6 border border-earth-100">
+  <h2 class="font-bold text-lg text-forest-900 mb-4">Tình trạng dịch vụ</h2>
+  <div class="space-y-3 text-sm">
+    <div class="flex items-center justify-between p-3 rounded-md <%= tursoEnabled ? 'bg-forest-50 text-forest-800' : 'bg-yellow-50 text-yellow-900' %>">
+      <span><strong>Database:</strong> <%= tursoEnabled ? 'Turso (persistent)' : 'SQLite local (KHÔNG bền vững trên Render free!)' %></span>
+      <span class="text-xl"><%= tursoEnabled ? '✓' : '⚠' %></span>
+    </div>
+    <div class="flex items-center justify-between p-3 rounded-md <%= cloudinaryEnabled ? 'bg-forest-50 text-forest-800' : 'bg-yellow-50 text-yellow-900' %>">
+      <span><strong>Upload ảnh:</strong> <%= cloudinaryEnabled ? 'Cloudinary đã kết nối' : 'CHƯA cấu hình Cloudinary - không upload được ảnh' %></span>
+      <span class="text-xl"><%= cloudinaryEnabled ? '✓' : '⚠' %></span>
+    </div>
+  </div>
+  <% if (!tursoEnabled || !cloudinaryEnabled) { %>
+    <div class="mt-4 text-xs text-forest-700 bg-cream-100 p-3 rounded">
+      💡 Xem README.md để biết cách cấu hình Turso và Cloudinary (cả hai đều miễn phí).
+    </div>
+  <% } %>
+</div>
+
+<%- include('_foot') %>

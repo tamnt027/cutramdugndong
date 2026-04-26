@@ -1,0 +1,49 @@
+<%- include('_shell') %>
+
+<p class="text-sm text-forest-700 mb-5">Tổng <%= items.length %> yêu cầu báo giá (hiển thị 200 mới nhất)</p>
+
+<% if (!items.length) { %>
+  <div class="bg-white rounded-xl border border-earth-100 p-12 text-center text-forest-600">
+    Chưa có yêu cầu nào.
+  </div>
+<% } else { %>
+  <div class="space-y-3">
+    <% items.forEach(function(it) { %>
+      <div class="bg-white rounded-xl border <%= it.handled ? 'border-earth-100' : 'border-earth-300 ring-2 ring-earth-100' %> p-5">
+        <div class="flex flex-wrap items-start justify-between gap-3 mb-3">
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <span class="font-bold text-forest-900 text-lg"><%= it.name %></span>
+              <% if (!it.handled) { %><span class="px-2 py-0.5 bg-earth-500 text-white text-xs rounded-full font-semibold">MỚI</span><% } %>
+            </div>
+            <div class="text-xs text-forest-600 mt-0.5"><%= new Date(it.created_at).toLocaleString('vi-VN') %></div>
+          </div>
+          <div class="flex gap-2">
+            <% if (!it.handled) { %>
+              <form method="POST" action="/admin/contacts/<%= it.id %>/handled">
+                <button class="px-3 py-1.5 bg-forest-700 hover:bg-forest-800 text-white rounded text-xs font-semibold">Đánh dấu đã xử lý</button>
+              </form>
+            <% } %>
+            <form method="POST" action="/admin/contacts/<%= it.id %>/delete" onsubmit="return confirm('Xóa yêu cầu này?')">
+              <button class="px-3 py-1.5 text-red-700 hover:bg-red-50 rounded text-xs font-semibold">Xóa</button>
+            </form>
+          </div>
+        </div>
+        <div class="grid sm:grid-cols-2 gap-x-6 gap-y-2 text-sm">
+          <div><span class="text-forest-600">SĐT:</span> <a href="tel:<%= it.phone %>" class="font-semibold text-earth-700 hover:underline"><%= it.phone %></a></div>
+          <% if (it.email) { %><div><span class="text-forest-600">Email:</span> <a href="mailto:<%= it.email %>" class="font-semibold text-earth-700 hover:underline"><%= it.email %></a></div><% } %>
+          <% if (it.product) { %><div><span class="text-forest-600">Sản phẩm:</span> <span class="font-semibold"><%= it.product %></span></div><% } %>
+          <% if (it.quantity) { %><div><span class="text-forest-600">Số lượng:</span> <span class="font-semibold"><%= it.quantity %></span></div><% } %>
+        </div>
+        <% if (it.message) { %>
+          <div class="mt-3 pt-3 border-t border-earth-100">
+            <div class="text-xs text-forest-600 mb-1">Nội dung:</div>
+            <div class="text-sm text-forest-800 whitespace-pre-wrap"><%= it.message %></div>
+          </div>
+        <% } %>
+      </div>
+    <% }); %>
+  </div>
+<% } %>
+
+<%- include('_foot') %>

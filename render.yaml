@@ -1,0 +1,57 @@
+services:
+  - type: web
+    name: cutram-dungdong
+    runtime: node
+    plan: free
+    region: singapore
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: SITE_URL
+        sync: false
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: TURSO_DATABASE_URL
+        sync: false
+      - key: TURSO_AUTH_TOKEN
+        sync: false
+      - key: CLOUDINARY_CLOUD_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: MAIL_FROM
+        sync: false
+      - key: MAIL_TO
+        value: congtydungdong@gmail.com
+      - key: COMPANY_NAME
+        value: "Công ty TNHH Thương Mại Dũng Đông"
+      - key: COMPANY_HOTLINE
+        value: "0909866929"
+      - key: COMPANY_HOTLINE_DISPLAY
+        value: "0909 866 929"
+      - key: COMPANY_EMAIL
+        value: congtydungdong@gmail.com
+      - key: COMPANY_ADDRESS
+        value: "5H11/1, ấp 17, Xã Tân Vĩnh Lộc, TP.HCM"
+      - key: COMPANY_ZALO
+        value: "0909866929"
+      - key: COMPANY_FACEBOOK
+        value: "https://facebook.com/"

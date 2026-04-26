@@ -1,0 +1,48 @@
+<header class="sticky top-0 z-40 bg-cream-50/95 backdrop-blur border-b-2 border-earth-200 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-20">
+      <a href="/" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full bg-forest-700 flex items-center justify-center text-cream-50 font-display font-bold text-xl shadow-md group-hover:bg-forest-600 transition">DĐ</div>
+        <div class="leading-tight">
+          <div class="font-display font-bold text-lg text-forest-900">Dũng Đông</div>
+          <div class="text-xs text-earth-700 uppercase tracking-wider">Cừ tràm - Cừ dừa - Bạch đàn</div>
+        </div>
+      </a>
+
+      <nav class="hidden lg:flex items-center gap-1">
+        <% const nav = [
+          { href: '/', label: 'Trang chủ' },
+          { href: '/gioi-thieu', label: 'Giới thiệu' },
+          { href: '/san-pham', label: 'Sản phẩm' },
+          { href: '/dich-vu', label: 'Dịch vụ' },
+          { href: '/hoat-dong', label: 'Hoạt động' },
+          { href: '/tin-tuc', label: 'Tin tức' },
+          { href: '/lien-he', label: 'Liên hệ' },
+        ]; %>
+        <% nav.forEach(function(item) {
+          const active = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+        %>
+          <a href="<%= item.href %>" class="px-4 py-2 rounded-md font-medium text-sm transition <%= active ? 'text-cream-50 bg-forest-700' : 'text-forest-900 hover:text-forest-700 hover:bg-forest-50' %>"><%= item.label %></a>
+        <% }); %>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <a href="tel:<%= company.hotline %>" class="hidden md:inline-flex items-center gap-2 bg-earth-500 hover:bg-earth-600 text-white px-4 py-2.5 rounded-md font-semibold text-sm shadow transition">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          Gọi ngay
+        </a>
+        <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-md text-forest-900 hover:bg-forest-50" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobile-menu" class="hidden lg:hidden pb-4 border-t border-earth-100 pt-3">
+      <% nav.forEach(function(item) {
+        const active = currentPath === item.href || (item.href !== '/' && currentPath.startsWith(item.href));
+      %>
+        <a href="<%= item.href %>" class="block px-3 py-2 rounded-md font-medium text-sm <%= active ? 'text-cream-50 bg-forest-700' : 'text-forest-900 hover:bg-forest-50' %>"><%= item.label %></a>
+      <% }); %>
+    </nav>
+  </div>
+</header>

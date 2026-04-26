@@ -1,0 +1,37 @@
+<%- include('_shell') %>
+
+<form method="POST" action="/admin/activities" enctype="multipart/form-data" class="bg-white rounded-xl border border-earth-100 p-6 max-w-2xl space-y-5">
+  <div>
+    <label class="block text-sm font-semibold text-forest-900 mb-1.5">Tiêu đề <span class="text-red-600">*</span></label>
+    <input type="text" name="title" required maxlength="200" class="w-full px-4 py-2.5 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none" placeholder="VD: Cung cấp cừ tràm công trình Quận 7">
+  </div>
+
+  <div>
+    <label class="block text-sm font-semibold text-forest-900 mb-1.5">Địa điểm</label>
+    <input type="text" name="location" maxlength="200" class="w-full px-4 py-2.5 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none" placeholder="VD: Quận 7, TP.HCM">
+  </div>
+
+  <div>
+    <label class="block text-sm font-semibold text-forest-900 mb-1.5">Mô tả ngắn</label>
+    <textarea name="description" rows="2" maxlength="500" class="w-full px-4 py-2.5 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none resize-none"></textarea>
+  </div>
+
+  <div>
+    <label class="block text-sm font-semibold text-forest-900 mb-1.5">Ảnh <span class="text-red-600">*</span></label>
+    <% if (!cloudinaryEnabled) { %>
+      <div class="mb-3 bg-yellow-50 border border-yellow-200 text-yellow-900 px-3 py-2 rounded text-xs">
+        ⚠ Chưa cấu hình Cloudinary. Bạn có thể dán URL ảnh vào ô dưới thay vì upload.
+      </div>
+    <% } %>
+    <input type="file" name="image" accept="image/*" class="block w-full text-sm mb-2">
+    <div class="text-xs text-forest-600 my-2">— hoặc dán URL ảnh —</div>
+    <input type="url" name="image_url" placeholder="https://..." class="w-full px-4 py-2.5 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none">
+  </div>
+
+  <div class="flex gap-3">
+    <button type="submit" class="bg-forest-700 hover:bg-forest-800 text-white px-6 py-2.5 rounded-md font-semibold shadow transition">Thêm</button>
+    <a href="/admin/activities" class="px-6 py-2.5 text-forest-700 hover:bg-forest-50 rounded-md font-semibold">Hủy</a>
+  </div>
+</form>
+
+<%- include('_foot') %>

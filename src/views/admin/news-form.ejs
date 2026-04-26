@@ -1,0 +1,51 @@
+<%- include('_shell') %>
+
+<form method="POST" action="<%= item ? '/admin/news/' + item.id : '/admin/news' %>" enctype="multipart/form-data" class="bg-white rounded-xl border border-earth-100 p-6 max-w-3xl">
+  <% if (!cloudinaryEnabled) { %>
+    <div class="mb-5 bg-yellow-50 border border-yellow-200 text-yellow-900 px-4 py-3 rounded-md text-sm">
+      ⚠ Chưa cấu hình Cloudinary - bạn không thể upload ảnh bìa. Có thể bỏ qua hoặc xem README để cấu hình.
+    </div>
+  <% } %>
+
+  <div class="space-y-5">
+    <div>
+      <label class="block text-sm font-semibold text-forest-900 mb-1.5">Tiêu đề <span class="text-red-600">*</span></label>
+      <input type="text" name="title" required maxlength="200" value="<%= item ? item.title : '' %>" class="w-full px-4 py-2.5 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none">
+    </div>
+
+    <div>
+      <label class="block text-sm font-semibold text-forest-900 mb-1.5">Mô tả ngắn</label>
+      <textarea name="excerpt" rows="2" maxlength="300" class="w-full px-4 py-2.5 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none resize-none"><%= item ? item.excerpt : '' %></textarea>
+      <p class="text-xs text-forest-600 mt-1">Hiển thị ở danh sách tin tức và meta description SEO.</p>
+    </div>
+
+    <div>
+      <label class="block text-sm font-semibold text-forest-900 mb-1.5">Ảnh bìa</label>
+      <% if (item && item.cover_url) { %>
+        <img src="<%= item.cover_url %>" alt="" class="w-40 h-24 object-cover rounded mb-2 border border-earth-200">
+      <% } %>
+      <input type="file" name="cover" accept="image/*" class="block w-full text-sm">
+      <p class="text-xs text-forest-600 mt-1">Tối đa 8MB. Để trống nếu không thay ảnh.</p>
+    </div>
+
+    <div>
+      <label class="block text-sm font-semibold text-forest-900 mb-1.5">Nội dung <span class="text-red-600">*</span></label>
+      <textarea name="content" rows="18" required class="w-full px-4 py-2.5 rounded-md border border-earth-200 focus:border-forest-500 focus:ring-2 focus:ring-forest-500/20 outline-none font-mono text-sm"><%= item ? item.content : '' %></textarea>
+      <p class="text-xs text-forest-600 mt-1">Hỗ trợ HTML cơ bản: &lt;h2&gt; &lt;h3&gt; &lt;p&gt; &lt;ul&gt; &lt;li&gt; &lt;strong&gt; &lt;a href=""&gt; &lt;table&gt; &lt;blockquote&gt;</p>
+    </div>
+
+    <label class="inline-flex items-center gap-2">
+      <input type="checkbox" name="published" value="1" <%= !item || item.published ? 'checked' : '' %> class="rounded">
+      <span class="text-sm font-semibold text-forest-900">Đăng ngay (bỏ chọn để lưu nháp)</span>
+    </label>
+  </div>
+
+  <div class="mt-6 flex gap-3">
+    <button type="submit" class="bg-forest-700 hover:bg-forest-800 text-white px-6 py-2.5 rounded-md font-semibold shadow transition">
+      <%= item ? 'Cập nhật' : 'Tạo bài viết' %>
+    </button>
+    <a href="/admin/news" class="px-6 py-2.5 text-forest-700 hover:bg-forest-50 rounded-md font-semibold">Hủy</a>
+  </div>
+</form>
+
+<%- include('_foot') %>
