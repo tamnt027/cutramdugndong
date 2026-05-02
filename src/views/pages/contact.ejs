@@ -74,15 +74,20 @@
         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,146,41,0.15),transparent_60%)]"></div>
         <div class="relative">
           <h3 class="font-display font-bold text-xl mb-6 tracking-tight">Liên hệ trực tiếp</h3>
-          <div class="space-y-5 text-sm">
-            <% company.hotlines.forEach(function(h) { %>
-              <a href="tel:<%= h.number %>" class="flex items-start gap-3 hover:text-earth-300 transition group">
-                <div class="w-10 h-10 rounded-xl bg-earth-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-earth-500/30 transition">
-                  <svg class="w-5 h-5 text-earth-400" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+          <div class="space-y-3 text-sm">
+            <% company.hotlines.forEach(function(h, i) { %>
+              <a href="tel:<%= h.number %>" class="flex items-start gap-3 p-3 -m-3 rounded-xl <%= i === 0 ? 'bg-earth-500/15 ring-1 ring-earth-500/30' : '' %> hover:bg-earth-500/20 transition group">
+                <div class="w-10 h-10 rounded-xl <%= i === 0 ? 'bg-earth-500' : 'bg-earth-500/20' %> flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 <%= i === 0 ? 'text-white' : 'text-earth-400' %>" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
                 </div>
-                <div>
-                  <div class="text-cream-300 text-[10px] uppercase tracking-[0.18em] font-semibold">Hotline<% if (h.name) { %> · <%= h.name %><% } %></div>
-                  <div class="font-bold text-base"><%= h.display %></div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-2 flex-wrap">
+                    <div class="text-cream-300 text-[10px] uppercase tracking-[0.18em] font-semibold">Hotline<% if (h.name) { %> · <%= h.name %><% } %></div>
+                    <% if (i === 0) { %>
+                      <span class="px-2 py-0.5 bg-earth-500 text-white text-[9px] font-bold uppercase tracking-wider rounded-full">Ưu tiên</span>
+                    <% } %>
+                  </div>
+                  <div class="font-bold text-base mt-0.5"><%= h.display %></div>
                 </div>
               </a>
             <% }); %>
