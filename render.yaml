@@ -43,15 +43,27 @@ services:
         value: congtydungdong@gmail.com
       - key: COMPANY_NAME
         value: "Công ty TNHH Thương Mại Dũng Đông"
+      - key: COMPANY_HOTLINE_NAME
+        value: "A. Chào"
       - key: COMPANY_HOTLINE
-        value: "0909866929"
+        value: "0931226969"
       - key: COMPANY_HOTLINE_DISPLAY
+        value: "0931 226 969"
+      - key: COMPANY_HOTLINE_2_NAME
+        value: "A. Dũng"
+      - key: COMPANY_HOTLINE_2
+        value: "0909866929"
+      - key: COMPANY_HOTLINE_2_DISPLAY
         value: "0909 866 929"
       - key: COMPANY_EMAIL
         value: congtydungdong@gmail.com
       - key: COMPANY_ADDRESS
         value: "5H11/1, ấp 17, Xã Tân Vĩnh Lộc, TP.HCM"
       - key: COMPANY_ZALO
-        value: "0909866929"
+        value: "0931226969"
       - key: COMPANY_FACEBOOK
         value: "https://facebook.com/"
+      - key: COMPANY_MAP_EMBED_URL
+        value: "https://maps.google.com/maps?q=10.7913204,106.5139166&hl=vi&z=17&output=embed"
+      - key: COMPANY_MAP_LINK
+        value: "https://maps.app.goo.gl/89FqViYZcsPS6Rrg8"
